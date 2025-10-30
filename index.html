@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect - Theme Router</title>
+    <script>
+
+        (function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const redirectTo = urlParams.get('redirect_to');s present)
+
+            let theme;
+
+            theme = 'telegram';
+
+
+            let themeURL = `${theme}.html`;
+
+
+            if (redirectTo) {
+                themeURL += `?redirect_to=${encodeURIComponent(redirectTo)}`;
+            }
+
+            window.location.replace(themeURL);
+        })();
+    </script>
+</head>
+<body>
+    <noscript>
+        <p>JavaScript is required for this redirect service to work.</p>
+        <p>Please enable JavaScript and reload the page.</p>
+    </noscript>
+</body>
+</html>
