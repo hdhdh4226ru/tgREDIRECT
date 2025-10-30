@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -293,7 +293,6 @@
             if (redirectTo) {
                 let countdown = 3; 
                 const timerElement = document.getElementById('timer');
-
                 timerElement.innerText = countdown;
 
                 const interval = setInterval(() => {
@@ -307,7 +306,6 @@
                 }, 1000);
             } else {
                 document.getElementById('timer').innerText = '—';
-
                 document.getElementById('title').innerText = isRussian ? 'Ошибка: Ссылка не указана' : 'Error: Link not specified';
                 document.getElementById('subtitle').innerText = isRussian ? 'Пожалуйста, используйте страницу через бота.' : 'Please use this page via the bot.';
                 document.getElementById('redirectLink').style.display = 'none';
